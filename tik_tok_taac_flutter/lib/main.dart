@@ -28,6 +28,7 @@ class HomePages extends StatelessWidget {
         title: Text('Tic Tok Taac'),
       ),
       body: Center(
+<<<<<<< HEAD
         child: Column(children: <Widget>[
           ElevatedButton(
               onPressed: () {
@@ -45,6 +46,28 @@ class HomePages extends StatelessWidget {
               },
               child: Text('1 vs AI')),
         ]),
+=======
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => GameScreen()),
+                    );
+                  },
+                  child: Text('1 vs 1')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => GameScreen()),
+                      //TODO: cambiare pagine di riferimento con quella con la AI
+                    );
+                  },
+                  child: Text('1 vs AI')),
+            ]),
+>>>>>>> main
       ),
     );
   }
@@ -78,7 +101,7 @@ class _GameScreenState extends State<GameScreen> {
   Widget build(BuildContext context) {
     double boardWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: ConfColor.white,
+      backgroundColor: Colors.cyan,
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -138,17 +161,29 @@ class _GameScreenState extends State<GameScreen> {
                       width: Game.sizeBloc,
                       height: Game.sizeBloc,
                       decoration: BoxDecoration(
+<<<<<<< HEAD
                           color: ConfColor.seaSerpent, //???>?
+=======
+                          color: Colors.black, //???>?
+>>>>>>> main
                           borderRadius: BorderRadius.circular(10.0)),
                       child: Center(
                         child: Text(
                           game.board![index],
                           style: TextStyle(
+<<<<<<< HEAD
                             color: game.board![index] == 'X'
                                 ? Colors.amberAccent
                                 : Colors.deepOrange,
                             fontSize: 64.0,
                           ),
+=======
+                              color: game.board![index] == 'X'
+                                  ? Colors.amberAccent
+                                  : Colors.deepOrange,
+                              fontSize: 64.0,
+                              fontFamily: 'Raleway'),
+>>>>>>> main
                         ),
                       ),
                     ),
@@ -177,7 +212,20 @@ class _GameScreenState extends State<GameScreen> {
               },
               icon: Icon(Icons.replay),
               label: Text('RESTART'),
+<<<<<<< HEAD
             )
+=======
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => HomePages()),
+                );
+              },
+              icon: Icon(Icons.home),
+              label: Text('HOME'),
+            ),
+>>>>>>> main
             // https://github.com/doctorcode9/Flutter-Tic-Tact-Toe-Game
             // TODO: make game class that will contains all data and method
           ]),
