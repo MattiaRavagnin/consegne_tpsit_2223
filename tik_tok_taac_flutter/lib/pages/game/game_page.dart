@@ -15,6 +15,7 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
   static const String PLAYER_Y = "O";
 
   late String currentPlayer;
+  late String result;
   late bool gameEnd;
   late List<String> occupied;
 
@@ -25,6 +26,7 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
   }
 
   void initializeGame() {
+    result = '';
     currentPlayer = PLAYER_X;
     gameEnd = false;
     occupied = ["", "", "", "", "", "", "", "", ""];
@@ -51,6 +53,7 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                   height: 30,
                 ),
                 restartButton(),
+                gameOverText()
               ],
             ),
           ),
@@ -105,9 +108,10 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
 
         setState(() {
           occupied[index] = currentPlayer;
-          changeTurn();
+
           checkForWinner();
           checkForDraw();
+          changeTurn();
         });
       },
       child: Container(
@@ -180,7 +184,7 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
       if (playerPosition0.isNotEmpty) {
         if (playerPosition0 == playerPosition1 &&
             playerPosition0 == playerPosition2) {
-          showGameOverMessage("Player $playerPosition0 Won");
+          result = '$currentPlayer win';
           gameEnd = true;
           return;
         }
@@ -201,23 +205,29 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
     }
 
     if (draw) {
-      showGameOverMessage("Draw");
+      result = 'Draw';
       gameEnd = true;
     }
   }
 
-  //result message
-  showGameOverMessage(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-          backgroundColor: Color.fromARGB(255, 139, 221, 142),
-          content: Text(
-            "Game Over \n $message",
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 20,
-            ),
-          )),
+  Widget gameOverText() {
+    return Column(
+      children: [
+        SizedBox(
+          height: 40,
+        ),
+        Text(
+          result,
+          style: const TextStyle(
+            color: Colors.black87,
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+      ],
     );
   }
 }
