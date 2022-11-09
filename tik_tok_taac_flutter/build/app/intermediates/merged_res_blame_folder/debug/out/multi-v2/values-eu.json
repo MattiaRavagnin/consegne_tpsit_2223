@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/studente/Desktop/consegne_tpsit_2223/tik_tok_taac_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
+            "map": [
+                {
+                    "source": "/home/studente/.gradle/caches/transforms-3/2f2166d4bf255137e2f7500a777604a4/transformed/core-1.6.0/res/values-eu/values-eu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

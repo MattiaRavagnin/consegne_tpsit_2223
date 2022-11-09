@@ -130,9 +130,10 @@ class _GamePageIAState extends State<GamePageIA> with TickerProviderStateMixin {
 
           if (currentPlayer == PLAYER_Y) {
             chooseRandom();
-            changeTurn();
+            print(currentPlayer);
             checkForWinner();
             checkForDraw();
+            changeTurn();
             return;
           }
         });
