@@ -1,0 +1,77 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+HttpException: HttpException: Connection closed before full header was received, uri = http://localhost:49935/json
+
+```
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.2, on Microsoft Windows [Versione 10.0.19045.2364], locale
+    it-IT)
+    • Flutter version 3.3.2 on channel stable at C:\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision e3c29ec00c (4 months ago), 2022-09-14 08:46:55 -0500
+    • Engine revision a4ff2c53d8
+    • Dart version 2.18.1
+    • DevTools version 2.15.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.0)
+    • Android SDK at C:\Users\matti\AppData\Local\Android\sdk
+    • Platform android-33, build-tools 33.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop for Windows (Visual Studio Community 2022 17.3.5)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.3.32922.545
+    ✗ Visual Studio is missing necessary components. Please re-run the Visual Studio
+      installer for the "Desktop development with C++" workload, and include these
+      components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[✓] Android Studio (version 2021.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2021.3)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.74.2)
+    • VS Code at C:\Users\matti\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.56.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Versione
+      10.0.19045.2364]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 108.0.5359.125
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 108.0.1462.76
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+```
